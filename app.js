@@ -7,8 +7,8 @@ const app = express();
 const port = 7000;
 
 app.use(express.json());
-//for singe file
 
+//for singe file
 app.post('/single', upload.single('profile'), (req, res) => {
     try {
         res.send(req.file);
